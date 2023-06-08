@@ -1,2 +1,2 @@
 #!/bin/bash
-0 string SCHOOL
+filename="$1"; magic_file="school.mgc"; [ -z "$filename" ] && { echo "Usage: ./detect_school.sh <file>"; exit 1; }; [ -f "$filename" ] || { echo "File '$filename' not found."; exit 1; }; file -m "$magic_file" "$filename"
