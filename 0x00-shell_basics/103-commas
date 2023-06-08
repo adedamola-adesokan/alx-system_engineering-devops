@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -la -m -p
+ls -d1 .[!.]* [[:alnum:]]* | awk -vORS=',' '{print ($0 == "./" || $0 == "../") ? $0 : (($0 ~ /\/$/) ? $0 : $0 ",")} END {print "\n"}
