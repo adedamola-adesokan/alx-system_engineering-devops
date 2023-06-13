@@ -1,0 +1,2 @@
+#!/bin/bash
+[ "$2" = "encode" ] && tr 'A-Za-z' 'N-ZA-Mn-za-m' <<< "$1" || [ "$2" = "decode" ] && tr 'N-ZA-Mn-za-m' 'A-Za-z' <<< "$1"
