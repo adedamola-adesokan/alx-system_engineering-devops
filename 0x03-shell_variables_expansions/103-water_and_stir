@@ -1,2 +1,2 @@
 #!/bin/bash
-export BESTCHOL=$(echo $WATER $STIR | awk '{print "obase=bestchol;" $1+0$2}' | dc)
+echo "ibase=water; obase=bestchol; $WATER + $STIR" | bc
